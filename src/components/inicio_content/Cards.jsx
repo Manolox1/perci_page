@@ -4,7 +4,7 @@ import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase/config";
 import "../styles/Card.css";
 
-const Card = ({ data }) => {
+const Cards = ({ data }) => {
     const [imageUrl, setImageUrl] = useState("");
 
     useEffect(() => {
@@ -39,8 +39,8 @@ const Card = ({ data }) => {
     );
 };
 
-Card.propTypes = {
+Cards.propTypes = {
         data:PropTypes.object.isRequired,
     };
 
-export default Card;
+export default Cards;
