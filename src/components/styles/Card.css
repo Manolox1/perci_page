@@ -1,0 +1,67 @@
+.card{
+    margin: 70px 20px 20px 20px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.titulo{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    position: absolute;
+    font-size: 20px;
+    background-color: #414141;
+    width: 10%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.detalles{
+    width: 100%;
+    padding: 10px;
+    background-color: #414141;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.precio p{
+    border-radius: 10px;
+    color: black;
+    width: 100%;
+    padding: 5px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.imagen{
+    height: 300px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    object-fit: cover;
+}
+
+.precio{
+    background-color: aliceblue;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.precio p{
+    background-color: aliceblue;
+    font-size: 18px;
+}
