@@ -22,7 +22,7 @@ const Card = ({ data }) => {
         fetchImageUrl();
     }, [data.titulo]);
 
-    console.log("soy el guardado"+imageUrl)
+    console.log("soy el guardado"+imageUrl);
 
     return (
         <div className="card">
