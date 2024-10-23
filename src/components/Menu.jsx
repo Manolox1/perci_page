@@ -2,7 +2,7 @@ import { collection, onSnapshot } from "firebase/firestore"
 import { useEffect } from "react"
 import { db } from "../firebase/config"
 import { useState } from "react"
-import Card from "./inicio_content/card"
+import Card from "./inicio_content/Cards"
 import "./styles/Menu.css"
 
 
