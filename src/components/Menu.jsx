@@ -2,7 +2,7 @@ import { collection, onSnapshot } from "firebase/firestore"
 import { useEffect } from "react"
 import { db } from "../firebase/config"
 import { useState } from "react"
-import Card from "./inicio_content/Cards"
+import Cards from "./inicio_content/Cards"
 import "./styles/Menu.css"
 
 
@@ -27,7 +27,7 @@ const Menu = () => {
     <div className="menu-conteiner">
       <div className="card-conteiner">
         {productos.map(p=>(
-          <Card key={p.id} data={p}></Card>
+          <Cards key={p.id} data={p}></Cards>
         ))}
       </div>
     </div>
