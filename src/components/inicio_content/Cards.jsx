@@ -9,7 +9,6 @@ const Cards = ({ data }) => {
 
     useEffect(() => {
         const fetchImageUrl = async () => {
-            console.log(data.titulo)
             const imageRef = ref(storage, `platos/${data.titulo}`); // Ajusta la extensión de la imagen si es diferente
             try {
                 const url = await getDownloadURL(imageRef);
@@ -22,8 +21,14 @@ const Cards = ({ data }) => {
         fetchImageUrl();
     }, [data.titulo]);
 
-    console.log("soy el guardado"+imageUrl);
-
+    const formatearPrecio = (precio) => {
+        const numero = Number(precio);
+        if (isNaN(numero)) return '0'; // Manejar casos donde el precio no es un número
+    
+        // Convertir a string y usar regex para formatear
+        return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    };
+    
     return (
         <div className="card">
             <div className="titulo">
@@ -32,7 +37,7 @@ const Cards = ({ data }) => {
             <img src={imageUrl} alt={data.titulo} className="imagen" />
             <div className="detalles">
                 <div className="precio">
-                    <p>$ {data.precio}</p>
+                    <p>$ {formatearPrecio(data.precio)}</p>
                 </div>
             </div>
         </div>
