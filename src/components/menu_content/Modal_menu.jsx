@@ -6,8 +6,10 @@ const Modal_menu = ({ datos, image, onClose }) => {
     return ReactDOM.createPortal (
         <div className="modal_select" onClick={onClose}>
             <div className="cont_modal" onClick={(e)=> e.stopPropagation()}>
-                
-                <h2>{datos.titulo}</h2>
+                <div className="title_modal">
+                    <button className="close-button" onClick={onClose}>X</button>
+                    <h2>{datos.titulo}</h2>
+                </div>
                 <div className="img_and_descript">
                     <img src={image} alt={datos.titulo} />
                     <ul>
@@ -19,7 +21,7 @@ const Modal_menu = ({ datos, image, onClose }) => {
                     </ul>
 
                 </div>
-                <button className="close-button" onClick={onClose}>X</button>
+                
             </div>
         </div>,
         document.body

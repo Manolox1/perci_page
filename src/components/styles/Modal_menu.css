@@ -2,6 +2,7 @@
     position: absolute;
 }
 
+
 .modal_select{
     position: fixed;
     top: 0;
@@ -16,19 +17,42 @@
     
 }
 
+.title_modal{
+    border-radius: 8px 8px 0 0;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.close-button{
+    position: relative;
+    float: right;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: white;
+}
+.close-button:hover{
+    cursor: pointer;
+}
+.close-button:active{
+    color: gray;
+}
+
 .cont_modal{
     background-color: white;
-    padding: 20px;
+    padding:0;
     border-radius: 8px;
-    max-width: 50%;
-    width: 50%;
+    max-width: 25%;
+    width: 40%;
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 
 .cont_modal h2{
     text-align: center;
-    margin: 10px auto 30px auto;
 }
 
 .cont_modal img{
@@ -39,18 +63,20 @@
 }
 
 .img_and_descript{
+    margin: 0 20px 20px 20px;
     display: flex;
+    flex-direction: column;
     background-color: rgb(56, 56, 56);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.img_and_descript ul{    
+.img_and_descript ul{ 
+    margin-top: 20px;   
     font-size: 20px;
     width: fit-content;
     list-style: none;
-    margin-left: 20px;
 }
 
 .img_and_descript li:first-child{
