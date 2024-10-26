@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase/config";
 import "../styles/Card.css";
+import Modal_menu from "../menu_content/Modal_menu";
 
 const Cards = ({ data }) => {
     const [imageUrl, setImageUrl] = useState("");
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
     useEffect(() => {
         const fetchImageUrl = async () => {
@@ -28,19 +30,37 @@ const Cards = ({ data }) => {
         // Convertir a string y usar regex para formatear
         return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     };
+
+    const handleCardClick = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalVisible(false);
+    };
     
     return (
-        <div className="card">
-            <div className="titulo">
-                <h3>{data.titulo}</h3>
-            </div>
-            <img src={imageUrl} alt={data.titulo} className="imagen" />
-            <div className="detalles">
-                <div className="precio">
-                    <p>$ {formatearPrecio(data.precio)}</p>
+        <>
+            <div className="card" onClick={handleCardClick}>
+                <div className="titulo">
+                    <h3>{data.titulo}</h3>
                 </div>
+                <img src={imageUrl} alt={data.titulo} className="imagen" />
+                <div className="detalles">
+                    <div className="precio">
+                        <p>$ {formatearPrecio(data.precio)}</p>
+                    </div>
+                </div>
+                
             </div>
-        </div>
+
+            <div className="modal_center">
+                {isModalVisible && (
+                        <Modal_menu datos={data} image={imageUrl} onClose={handleCloseModal} />
+                )}
+            </div>
+            
+        </>
     );
 };
 

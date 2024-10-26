@@ -5,7 +5,7 @@
 }
 
 
-.categoria-selector{
+.categoria-selector, .card-conteiner{
     display: grid;
     border-radius: 10px;
     grid-template-columns: repeat(4,1fr);
@@ -13,6 +13,7 @@
     margin-bottom: 40px;
     z-index: 0;
 }
+
 
 .btn-reset{
     display: flex;

@@ -9,8 +9,10 @@ const Menu = () => {
   const [productos, setProductos] = useState([]);
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
 
+  
+
   useEffect(() => {
-    const unsub = onSnapshot(collection(db, "platos"), (snapshot) => {
+      const unsub = onSnapshot(collection(db, "platos"), (snapshot) => {
       const productosData = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
@@ -22,12 +24,13 @@ const Menu = () => {
   }, []);
 
   // Lista de categorías disponibles
-  const categorias = ["Hamburguesas","Ensaladas","Entrantes", "Sandwiches","Promos","Revueltos","Bebidas", "Tortas"];
+  const categorias = ["Hamburguesas","Ensaladas","Entrantes", "Sandwiches","Promos","Revueltos","Bebidas", "Tortas", "Milanesas"];
 
   // Filtrar productos según la categoría seleccionada
   const productosFiltrados = categoriaSeleccionada
     ? productos.filter(producto => producto.categoria === categoriaSeleccionada)
     : [];
+
 
   return (
     <>
@@ -66,7 +69,7 @@ const Menu = () => {
         {/* Contenedor de las tarjetas filtradas */}
         <div className="card-conteiner">
           {productosFiltrados.map((p) => (
-            <Cards key={p.id} data={p} />
+            <Cards key={p.id} data={p}/>
           ))}
         </div>
 
