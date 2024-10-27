@@ -104,3 +104,123 @@
     background-color: aliceblue;
     font-size: 18px;
 }
+
+@media (max-width: 480px) {
+    *{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;        
+    }
+    .card{
+        width: 350px;
+        height: 300px;
+        border: #414141 3px solid;
+        border-radius: 22px;
+        display: flex;
+        flex-direction: column;
+        z-index: -1;
+    }
+    
+    .card:hover{
+        cursor: pointer;
+    }
+    
+    .cards{
+        margin: 40px auto auto auto;
+        width: 175px;
+        border: #414141 3px solid;
+        border-radius: 22px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        z-index: -3;
+    }
+    
+    
+    .titulo{
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card h3{
+        position: absolute;
+        font-size: 20px;
+        background-color: #414141;
+        width: 40%;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .cards h3{
+        position: absolute;
+        font-size: 17px;
+        background-color: rgb(112, 112, 112);
+        width: 40%;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: black;
+        z-index: 0;
+    }
+    
+    .detalles{
+        width: 102%;
+        background-color: #414141;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .precio p{
+        border-radius: 10px;
+        color: black;
+        width: 100%;
+        padding: 5px;
+        font-weight: 600;
+        margin-right: 5px;
+    }
+    
+    .imagen{
+        height: 300px;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        margin: 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    
+    .imagen-select{
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+        margin: 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .imagen-select:hover{
+        cursor: pointer;
+    }
+    
+    .precio{
+        background-color: aliceblue;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    .precio p{
+        background-color: aliceblue;
+        font-size: 18px;
+    }
+    
+    
+}

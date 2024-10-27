@@ -11,6 +11,21 @@
     background-color: rgb(0, 0, 0);
 }
 
+.Header .logo{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 200px;
+    height: 80px;
+}
+
+.Header img{
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
 
 .objects{
     display: flex;
@@ -34,61 +49,20 @@
     color: white;
 }
 
-
-
-
-
-/*Estilos del Modulo*/
-
-
-
-.mod{
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    z-index: 3;
-}
-
-.modulo{
-    background-color: #414141;
-    width: 100%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /*por dentro*/
-    -webkit-box-shadow: inset 0px -3px 32px 0px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px -3px 32px 0px rgba(0,0,0,1);
-    box-shadow: inset 0px -3px 32px 0px rgba(0,0,0,1);
-
-    /*por fuera*/
-    -webkit-box-shadow: 0px 14px 59px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 14px 59px 0px rgba(0,0,0,1);
-    box-shadow: 0px 14px 59px 0px rgba(0,0,0,1);
-}
-.contenido{
-    display: grid;
-    grid-template-columns: repeat(3,140px);
-    gap:30px;
-}
-
-.btn_menu{
-    background-color: #4f4f4f;
-    width: auto;
-    height: 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+@media (max-width:480px) {
+    .Header .logo{
+        display: none;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 200px;
+        height: 80px;
+    }
     
-}
-
-.mostrar{
-    display: block;
-}
-
-.ocultar{
-    display: none;
+    .Header img{
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }
 }

@@ -13,7 +13,7 @@ const Router = () => {
             <div className="Header">
                 <div className="logo">
                     <div className="img">
-                        <img src="" alt="" />
+                        <img src="src/components/img/logo.webp" alt="" />
                     </div>
                 </div>
                 <div className="objects">
