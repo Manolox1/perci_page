@@ -35,3 +35,14 @@
     70% {margin-left: -200vw;}
     100% {margin-left: -200vw;}
 }
+
+@media (max-width:480px) {
+    .slider-frame{
+        height: 290px;
+        overflow: hidden;
+        animation: slide 10s infinite alternate ease-in;
+    }
+    .slider-frame img{
+        width: 100vw;
+    }
+}

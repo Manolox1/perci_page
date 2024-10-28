@@ -7,7 +7,7 @@ const Modal_menu = ({ datos, image, onClose }) => {
         <div className="modal_select" onClick={onClose}>
             <div className="cont_modal" onClick={(e)=> e.stopPropagation()}>
                 <div className="title_modal">
-                    <button className="close-button" onClick={onClose}>X</button>
+                    <button className="close-button" onClick={onClose}>x</button>
                     <h2>{datos.titulo}</h2>
                 </div>
                 <div className="img_and_descript">

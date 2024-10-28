@@ -34,7 +34,7 @@
 }
 
 .texto h1, p, ol{
-    width: 70%;
+    width: 80%;
 }
 .texto h1, p{
     display: flex;
@@ -55,7 +55,7 @@ ol{
 
 .texto p a{
     color: aqua;
-    margin: 0 5px;
+    margin: 2px;
 }
 
 /*MAPA Y NOSOTROS*/
@@ -87,4 +87,79 @@ ol{
     display: flex;
     flex-direction: column;
     margin: 100px auto auto 40px;
+}
+
+@media (max-width: 480px) {
+    .opciones{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .opciones .caja img{
+        height: 400px;
+        width: 100%;
+    }
+
+    .opciones .caja:first-child{
+        display: none;
+    }
+    .opciones .caja:last-child{
+        display: none;
+    }
+
+    .texto{
+        height: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .texto a{
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .texto p a{
+        color: rgb(0, 0, 0);
+        margin-left: 5px;
+        margin-top: 0;
+    }
+
+    /*MAPA Y NOSOTROS*/
+
+    .mapa-nosotros{
+        border: 1px solid black;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        height: 110vh;
+        width: 100%;
+    }
+
+    .mapa-nosotros h1{
+        margin: 30px auto 0;
+    }
+
+    .mapa{
+        border: 1px solid black;
+        margin: 20px auto 0;
+        width: 70%;
+        height: 50%;
+        background-color: aliceblue;
+    }
+    
+    .caja-mapa:first-child{
+        background-color:#414141;
+        height: 150%;
+    }
+    
+    .caja-mapa:last-child{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 100px auto auto 40px;
+    }
 }

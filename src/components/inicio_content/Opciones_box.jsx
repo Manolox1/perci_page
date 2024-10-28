@@ -11,7 +11,7 @@ const Opciones_box = () => {
                     <div className="texto">
                         <h1>Plato <br />sugerido</h1>
                         <p>Una opción más que se suma a todos los platos que ofrece nuestro menú. Enterate de los platos sugeridos de cada día en las stories de nuestras redes sociales!</p>
-                        <p>Más info en nuestro <a href=""> Facebook</a>  e  <a href=""> Instagram</a></p>
+                        <p>Más info en nuestro <a href="https://www.instagram.com/percipilar/"> Instagram</a></p>
                     </div>
                 </div>
                 <div className="caja">
