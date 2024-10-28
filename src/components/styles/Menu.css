@@ -46,7 +46,8 @@
     .menu-conteiner{
         display: flex;
         margin: auto;
-        width: 300vw;
+        width: 100vw;
+        justify-content: center;
     }
 
     .categoria-selector{
