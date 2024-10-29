@@ -1,12 +1,16 @@
 import "../styles/Slider.css"
+import ListImg from "./ListImg";
 const Slider = () => {
+    const fondos =["fondo(1).jpeg", "fondo(2).jpeg", "fondo.jpeg"]
     return (
         <div className="conteiner-slider">
             <div className="slider-frame">
                 <ul>
-                    <li><a href=""><img src="src/components/img/ensalada.jpeg" alt="" /></a></li>
-                    <li><a href=""><img src="src/components/img/ensalada.jpeg" alt="" /></a></li>
-                    <li><a href=""><img src="src/components/img/ensalada.jpeg" alt="" /></a></li>
+                    {
+                        fondos.map((img, i)=>(
+                            <ListImg key={i} imgData={img}/>
+                        ))
+                    }
                 </ul>
                 
             </div>

@@ -1,11 +1,30 @@
 import "../styles/Opciones_box.css"
+import { useState,useEffect } from "react";
+import { storage } from "../../firebase/config";
+import { getDownloadURL,ref } from "firebase/storage";
 
 const Opciones_box = () => {
+    const [imageUrl, setImageUrl] = useState("");
+
+    useEffect(() => {
+        const fetchImageUrl = async () => {
+            const imageRef = ref(storage, `cajas_img/caja.jpeg`); // Ajusta la extensión de la imagen si es diferente
+            try {
+                const url = await getDownloadURL(imageRef);
+                setImageUrl(url);
+            } catch (error) {
+                console.error("Error al obtener la URL de la imagen: ", error);
+            }
+        };
+
+        fetchImageUrl();
+    }, []);
     return (
+        
         <div>
             <div className="opciones">
                 <div className="caja">
-                    <img src="" alt="" />
+                    <img src={imageUrl} alt="" />
                 </div>
                 <div className="caja">
                     <div className="texto">
@@ -15,7 +34,7 @@ const Opciones_box = () => {
                     </div>
                 </div>
                 <div className="caja">
-                    <img src="" alt="" />
+                    <img src={imageUrl} alt="" />
                 </div>
                 <div className="caja">
                     <div className="texto">
@@ -25,7 +44,7 @@ const Opciones_box = () => {
                     </div>
                 </div>
                 <div className="caja">
-                    <img src="" alt="" />
+                    <img src={imageUrl} alt="" />
                 </div>
                 <div className="caja">
                     <div className="texto">
@@ -39,7 +58,7 @@ const Opciones_box = () => {
                     </div>
                 </div>
                 <div className="caja">
-                    <img src="" alt="" />
+                    <img src={imageUrl} alt="" />
                 </div>
                 <div className="caja">
                     <div className="texto">
@@ -47,7 +66,7 @@ const Opciones_box = () => {
                     </div>
                 </div>
                 <div className="caja">
-                    <img src="" alt="" />
+                    <img src={imageUrl} alt="" />
                 </div>
             </div>
             <div className="mapa-nosotros">

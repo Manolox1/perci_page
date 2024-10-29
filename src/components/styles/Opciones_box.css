@@ -18,7 +18,8 @@
 
 
 .opciones .caja img{
-    height: 100%;
+    object-fit: cover;
+    height: 460px;
     width: 100%;
 }
 
@@ -61,7 +62,7 @@ ol{
 /*MAPA Y NOSOTROS*/
 
 .mapa-nosotros{
-    border: 1px solid black;
+    
     margin-top: 150px;
     display: grid;
     height: 75vh;
@@ -105,9 +106,6 @@ ol{
     .opciones .caja:first-child{
         display: none;
     }
-    .opciones .caja:last-child{
-        display: none;
-    }
 
     .texto{
         height: 400px;
@@ -131,7 +129,7 @@ ol{
     /*MAPA Y NOSOTROS*/
 
     .mapa-nosotros{
-        border: 1px solid black;
+        
         margin-top: 150px;
         display: flex;
         flex-direction: column;

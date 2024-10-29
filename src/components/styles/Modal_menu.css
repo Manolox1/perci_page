@@ -60,7 +60,7 @@
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
 }
 
 .img_and_descript{

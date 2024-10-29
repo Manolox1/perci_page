@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { storage } from "../../firebase/config";
 import { ref, getDownloadURL } from "firebase/storage";
 
-const Card_menu = ({data}) => {
+const Card_menu = ({data, onLoad}) => {
     const [imageUrl, setImageUrl] = useState("");
 
     useEffect(() => {
@@ -25,13 +25,14 @@ const Card_menu = ({data}) => {
             <div className="titulo">
                     <h3>{data}</h3>
             </div>
-            <img src={imageUrl} alt={data} className="imagen-select" />
+            <img src={imageUrl} alt={data} className="imagen-select" onLoad={onLoad}/>
         </div>
     )
 }
 
 Card_menu.propTypes = {
     data:PropTypes.string.isRequired,
+    onLoad:PropTypes.func.isRequired,
 };
 
 export default Card_menu
