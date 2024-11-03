@@ -4,6 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Inicio from "../components/Inicio";
 import Menu from "../components/Menu";
 import "./Header.css"
+import Eventos from "../components/Eventos";
 
 const Router = () => {
 
@@ -30,6 +31,7 @@ const Router = () => {
             <Routes>
                 <Route path="/" element={<Inicio/>}/>
                 <Route path="/menu" element={<Menu/>}/>
+                <Route path="/eventos" element={<Eventos/>}/>
             </Routes>
         </div>
     )

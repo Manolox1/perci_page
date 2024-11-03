@@ -1,11 +1,14 @@
 
 /*MAPA Y NOSOTROS*/
+.Inicio{
+    background-color: #cecece;
+}
 
 .mapa-nosotros{
     
     margin-top: 150px;
     display: grid;
-    height: 75vh;
+    height: 70vh;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -16,20 +19,30 @@
     border: 1px solid black;
     margin: 20px auto 0;
     width: 70%;
-    height: 50%;
+    height: 65%;
     background-color: aliceblue;
 }
 
 .caja-mapa:first-child{
+    display: flex;
+    flex-direction: column;
     background-color:#414141;
 }
 
-.caja-mapa:last-child{
-    display: flex;
-    flex-direction: column;
-    margin: 100px auto auto 40px;
+.caja-mapa:first-child p{
+    margin: 10px auto 10px auto;
 }
 
+.contactos{
+    margin: 50px 150px;
+    font-size: 20px;
+}
+
+.caja-mapa:last-child{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
 @media (max-width: 480px) {
 
     /*MAPA Y NOSOTROS*/
@@ -61,9 +74,13 @@
     }
     
     .caja-mapa:last-child{
+        height: 150%;
+    }
+    .contactos{
         display: flex;
         flex-direction: column;
-        height: 100%;
-        margin: 100px auto auto 40px;
+        margin: auto;
+        font-size: 20px;
     }
+    
 }
