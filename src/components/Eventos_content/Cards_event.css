@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    border: 1px solid palegreen;
+    min-height: 70vh;
+    background-color: #787878;
 }
 
 .card_event{
@@ -18,28 +18,49 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding-top: 10px;
     backface-visibility: hidden;
     border-radius: 20px;
     transition: 1s;
+    border:inset 10px rgb(102, 102, 102);
 }
 
+.card_event p{
+    padding-top: 30px;
+}
 .card_event .front{
-    background-color: aqua;
+    background-color: white;
     transform: perspective(500px) rotateY(0deg);
+}
+
+.card_event .front img{
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
 }
 
 .card_event .back{
     background-color: blueviolet;
     transform: perspective(500px) rotateY(180deg);
 }
+.card_event .back img{
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+}
 
 
 .giro_front{
     transform: perspective(500px) rotateY(180deg);
 }
+
+.giro_front img{
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+}
+
 
 .giro_back{    
     background-color: blueviolet;
@@ -63,5 +84,21 @@
         position: relative;
         margin: 50px 50px;
         cursor: pointer;
+    }
+
+    .card_event .back img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .card_event .front img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .fron::-webkit-scrollbar {
+        width: 0px;               /* width of the entire scrollbar */
     }
 }
