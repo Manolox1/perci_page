@@ -1,11 +1,11 @@
 .footer{
-    min-height: 100%;
     width: 100vw;
     padding: 10px 0;
     background-color: #414141;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 }
 
 .foot{
