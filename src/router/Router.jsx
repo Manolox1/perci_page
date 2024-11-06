@@ -5,8 +5,28 @@ import Inicio from "../components/Inicio";
 import Menu from "../components/Menu";
 import "./Header.css"
 import Eventos from "../components/Eventos";
+import { useEffect, useState } from "react";
+import { getDownloadURL, ref } from "firebase/storage";
+import { storage } from "../firebase/config";
 
 const Router = () => {
+    const [imageUrl, setImageUrl] = useState(null);
+
+    console.log(imageUrl)
+    useEffect(()=>{
+        const fetchLogo = async ()=>{
+            const imgRef = ref(storage, "logo.webp")
+
+            try{
+                const url = await getDownloadURL(imgRef);
+                setImageUrl(url);
+            }catch(error){
+                console.log(error)
+            }
+        };
+
+        fetchLogo()
+    },[])
 
 
     return (
@@ -14,7 +34,7 @@ const Router = () => {
             <div className="Header">
                 <div className="logo">
                     <div className="img">
-                        <img src="src/components/img/logo.webp" alt="" />
+                        <img src={imageUrl} alt="" />
                     </div>
                 </div>
                 <div className="objects">

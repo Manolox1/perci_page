@@ -22,7 +22,7 @@
     padding-top: 10px;
     backface-visibility: hidden;
     border-radius: 20px;
-    transition: 1s;
+    transition: 2s ease-in-out;
     border:inset 10px rgb(102, 102, 102);
 }
 
@@ -41,7 +41,8 @@
 }
 
 .card_event .back{
-    background-color: blueviolet;
+    color: white;
+    background-color: rgb(100, 100, 100);
     transform: perspective(500px) rotateY(180deg);
 }
 .card_event .back img{
@@ -62,9 +63,20 @@
 }
 
 
-.giro_back{    
-    background-color: blueviolet;
+.giro_back{  
+    color: rgb(100,100,100);  
+    background-color: white;
     transform: perspective(500px) rotateY(360deg);
+}
+
+/*Parte trasera de descripcion de la carta*/
+.giro_back h2, .giro_back h3, .back h2, .back h3{
+    font-size: 25px;
+    text-decoration: underline;
+}
+.giro_back li, .back li{
+    list-style: none;
+    margin: 15px;
 }
 
 

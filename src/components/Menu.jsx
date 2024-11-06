@@ -4,6 +4,7 @@ import { db } from "../firebase/config";
 import Cards from "./inicio_content/Cards";
 import Card_menu from "./inicio_content/Card_menu";
 import "./styles/Menu.css";
+import Footer from "./inicio_content/Footer"
 
 const Menu = () => {
   const [productos, setProductos] = useState([]);
@@ -90,6 +91,7 @@ const Menu = () => {
 
         
       </div>
+      <Footer/>
     </>
   );
 }
