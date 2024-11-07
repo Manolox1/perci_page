@@ -20,16 +20,7 @@ const Cards_event = () => {
 
     return (
         <div className="card_event_container">
-            <div className="description">
-                <p>Perci ofrece una variedad de opciones en picadas, carnes braseadas, pastelería y barras para tu evento (cumpleaños, baustismos, reuniones familiares, juntada de amigos y festejos varios).<br/></p>
-                <h3>Te ofrecemos las opciones mas faciles para armar un evento</h3>
-                <ol>
-                    <li>DEFINÍS cantidad de comensales.</li>
-                    <li>ELEGÍS si querés ternera o bondiola braseada sóla o lo combinás con picada, empanadas, pastelería y/o bebida.</li>
-                    <li>PEDÍS con un mínimo de 48 horas de anticipación.</li>
-                    <li>RETIRÁS todo tu pedido por Perci!</li>
-                </ol>
-            </div>
+            
             <div className="grid_card_event">
                 <div className="card_event" id="cards" onClick={girar}>
                     <div className="front">
