@@ -42,7 +42,7 @@ const Menu = () => {
   const allImagesLoaded = loadedImages >= productosFiltrados.length;
 
   return (
-    <>
+    <div className="all-menu">
 
       {(isLoading || !allImagesLoaded) && (
         <div className="loading-screen"></div>
@@ -92,7 +92,7 @@ const Menu = () => {
         
       </div>
       <Footer/>
-    </>
+    </div>
   );
 }
 

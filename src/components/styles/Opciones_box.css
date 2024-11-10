@@ -30,11 +30,18 @@
 }
 
 .caja-mapa:first-child p{
-    margin: 10px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
 }
 
 .contactos{
-    margin: 50px 150px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-between;
+    margin: 50px auto;
+    align-items: center;
     font-size: 20px;
 }
 
@@ -42,6 +49,35 @@
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
+}
+.icono{
+    border: 5px solid rgb(168, 168, 168);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.icono:hover{
+    -webkit-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.36);
+    box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.36);
+}
+
+.icono a{
+    color: rgb(76, 76, 76);
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    text-decoration: none;
+}
+
+.icono p{
+    margin-top: 5px;
+}
+
+.icono img{
+    width: 60px;
+    margin-right: 20px;
 }
 @media (max-width: 480px) {
 
@@ -82,5 +118,36 @@
         margin: auto;
         font-size: 20px;
     }
+
+    .contactos{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        justify-content: space-between;
+        margin: 100px auto ;
+        font-size: 20px;
+    }
+
+    .icono{
+        border: none;
+        padding: 0;
+    }
+
+    .icono:hover{
+        -webkit-box-shadow: inset 10px 0px 0px -200px rgba(0,0,0,0);
+    -moz-box-shadow: inset 10px 0px 0px -200px rgba(0,0,0,0);
+    box-shadow: inset 10px 0px 0px -200px rgba(0,0,0,0);
+    }
+
+    .icono p{
+        display: none;
+    }
     
+    .icono img{
+        transition: 1s;
+    }
+
+    .icono img:hover{
+        width: 100px;
+    }
 }
