@@ -1,3 +1,5 @@
 body::-webkit-scrollbar {
-    width: 0px;               /* width of the entire scrollbar */
+    scrollbar-width: none;
+    width: 10px;
+    opacity: 0;
 }

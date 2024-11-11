@@ -25,3 +25,21 @@
     margin: 0;
     margin-top: 20px;
 }
+
+.consultas{
+    display: flex;
+    margin:40px auto 60px;
+    width: 600px;
+    border: 2px solid black;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.consultas:hover{
+    -webkit-box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.75);
+}
+

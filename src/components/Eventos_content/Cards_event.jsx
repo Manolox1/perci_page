@@ -46,6 +46,7 @@ const Cards_event = () => {
                             <li>Barril de Cerveza Quilmes de 50lts.</li>
                             <li>Barril de Cerveza Stella Arotis de 20lts.</li>
                             <li>Barril de Cerveza Patagonia de 20lts.</li>
+                            <li>Entre otras Cervezas seleccionadas...</li>
                         </ul>
                     </div>
                 </div>

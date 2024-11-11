@@ -28,7 +28,7 @@ const Menu = () => {
   }, []);
 
   // Lista de categorías disponibles
-  const categorias = ["Hamburguesas","Ensaladas","Entrantes", "Sandwiches","Promos","Revueltos","Bebidas", "Tortas", "Milanesas"];
+  const categorias = ["Burguers","Ensaladas","Entrantes", "Sandwiches","Promos","Revueltos","Bebidas", "Tortas", "Milanesas"];
 
   // Filtrar productos según la categoría seleccionada
   const productosFiltrados = categoriaSeleccionada
